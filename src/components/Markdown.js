@@ -13,11 +13,16 @@ export default class Markdown extends Component {
     };
   }
 
-  handleTextBox = event => this.setState({ mdText: event.target.value });
+  handleTextBox = event => {
+    this.setState({ mdText: event.target.value });
+  };
 
-  mdFileName = event => this.setState({ downloadMd: event.target.value });
-
-  htmlFileName = event => this.setState({ downloadHtml: event.target.value });
+  mdFileName = event => {
+    this.setState({ downloadMd: event.target.value });
+  };
+  htmlFileName = event => {
+    this.setState({ downloadHtml: event.target.value });
+  };
 
   render() {
     return (
@@ -65,12 +70,12 @@ export default class Markdown extends Component {
                 className={"btn btn-primary "}
                 download={this.state.downloadHtml + ".html"}
                 href={URL.createObjectURL(
-                  new Blob([$(".markdown-container").html()], {
+                  new Blob([$(".mdFile-container").html()], {
                     type: "text/html"
                   })
                 )}
               >
-                Download
+                Download Download
               </a>
             </div>
           </div>
