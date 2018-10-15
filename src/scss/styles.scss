@@ -1,0 +1,44 @@
+.container {
+  .row {
+    margin-top: 10px;
+
+    .side {
+      display: flex;
+      flex-flow: column;
+      margin-right: 10px;
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .download-area {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        input {
+          padding: 5px 10px;
+          width: 65%;
+        }
+      }
+    }
+
+    .left {
+      textarea {
+        padding: 5px 10px;
+        min-height: 600px;
+        min-width: 300px;
+      }
+    }
+
+    .right {
+      .mdFile-container {
+        width: 100%;
+        min-height: 600px;
+        min-width: 300px;
+        border: 1px solid;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
